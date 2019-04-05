@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public interface IPieRepository
+
+namespace BethanysPieShop.Models
 {
-    IEnumerable<Pie> GetAllPies();
-    Pie GetPieById(int pieId);
+    public interface IPieRepository
+    {
+        IEnumerable<Pie> GetAllPies();
+        Pie GetPieById(int pieId);
+    }
 }
