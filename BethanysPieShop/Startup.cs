@@ -15,17 +15,19 @@ namespace BethanysPieShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IPieRepository, MockPieRepository>(); //every time new instance
+            //services.AddSingleton()
+            //services.Scoped() -- per request, when out of request scope, then return new instance, between singleton and transient
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseDeveloperExceptionPage(); //1
+            app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
-
         }
     }
 }
