@@ -1,8 +1,8 @@
-﻿using BethanysPieShop.Models;
+﻿using BethanysPieShop.DataSource.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BethanysPieShop.Models
+namespace BethanysPieShop.DataSource.Repositories
 {
     public class MockPieRepository : IPieRepository
     {
@@ -38,6 +38,16 @@ namespace BethanysPieShop.Models
         public Pie GetPieById(int pieId)
         {
             return _pies.FirstOrDefault(p => p.Id == pieId);
+        }
+
+        public Pie Add(Pie pie)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Save()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿.pies-wrapper{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:flex-start;
+}
+
+.pie {
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(164, 149, 129, 0.5);
+    border-radius: 25px;
+    transition:.1s;
+    background-color:white;
+}
+
+img {
+    border-radius: 25px;
+}
+
+
+.pie:hover{
+    transform:scale(1.1);
+}

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BethanysPieShop.Models;
+﻿using System.Linq;
+using BethanysPieShop.DataSource.Repositories;
 using BethanysPieShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 

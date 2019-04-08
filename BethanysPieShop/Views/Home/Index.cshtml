@@ -1,11 +1,18 @@
-﻿@using BethanysPieShop.Models
-@model BethanysPieShop.ViewModels.HomeViewModel
+﻿@model BethanysPieShop.ViewModels.HomeViewModel
+@{ 
+    Layout = "_Layout";
+}
 
 <h2> @Model.Title</h2>
-@foreach (var pie in Model.Pies)
-{
-    <div>
-        <h2>@pie.Name</h2>
-        <h3>@pie.Price.ToString("c")</h3>
-    </div>
-}
+
+<div class="pies-wrapper">
+    @foreach (var pie in Model.Pies)
+    {
+        <div class="pie">            
+                <img src="@pie.ImageThumbnailUrl" alt="" />
+                <h2>@pie.Name</h2>
+                <h3>@pie.Price.ToString("c")</h3>
+                <p>@pie.ShortDescription</p>              
+            </div>
+    }
+</div>

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BethanysPieShop.Models
+namespace BethanysPieShop.DataSource.Models
 {
     public class Pie
     {
