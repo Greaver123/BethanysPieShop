@@ -10,7 +10,9 @@ namespace BethanysPieShop.DataSource
     {
         public DbSet<Pie> Pies { get; set; }
 
-        public PieShopDbContext(DbContextOptions<PieShopDbContext> options):base(options)
+        public DbSet<Feedback> Feedbacks { get; set; }
+
+        public PieShopDbContext(DbContextOptions<PieShopDbContext> options) : base(options)
         {
 
         }
