@@ -1,5 +1,5 @@
-﻿@model BethanysPieShop.ViewModels.HomeViewModel
-@{ 
+﻿@model HomeViewModel
+@{
     Layout = "_Layout";
 }
 
@@ -8,11 +8,14 @@
 <div class="pies-wrapper">
     @foreach (var pie in Model.Pies)
     {
-        <div class="pie">            
-                <img src="@pie.ImageThumbnailUrl" alt="" />
-                <h2>@pie.Name</h2>
-                <h3>@pie.Price.ToString("c")</h3>
-                <p>@pie.ShortDescription</p>              
-            </div>
+
+
+    <div class="pie">
+        <img src="@pie.ImageThumbnailUrl" alt="" />
+        <h4>@pie.Name</h4>
+        <h5>@pie.Price.ToString("c")</h5>
+        <p>@pie.ShortDescription</p>
+        <a asp-controller="Home" asp-action="Details" asp-route-id="@pie.Id"><span></span></a>
+    </div>
     }
 </div>

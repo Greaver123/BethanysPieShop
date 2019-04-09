@@ -1,0 +1,18 @@
+﻿@model DetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Details</h1>
+<div class="pie-details-container">
+    <img src="@Model.ImageUrl" alt="" />
+    <h4>@Model.Name</h4>
+    <h5>@Model.Price.ToString("c")</h5>
+    <p>@Model.IsInStock</p>
+    <p>@Model.IsPieOfTheWeek</p>
+    <p>@Model.LongDescription</p>
+</div>
+
+
+
+

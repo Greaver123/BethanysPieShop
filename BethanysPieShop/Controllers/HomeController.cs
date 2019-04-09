@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using AutoMapper;
 using BethanysPieShop.DataSource.Repositories;
 using BethanysPieShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace BethanysPieShop.Controllers
     public class HomeController : Controller
     {
         private readonly IPieRepository _pieRepository;
+        private readonly IMapper mapper;
 
-        public HomeController(IPieRepository pieRepository)
+        public HomeController(IPieRepository pieRepository, IMapper mapper)
         {
             this._pieRepository = pieRepository;
+            this.mapper = mapper;
         }
 
         // GET: /<controller>/
@@ -30,5 +33,19 @@ namespace BethanysPieShop.Controllers
 
             return View(homeViewModel);
         }
+
+       public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+
+            if (pie ==null)
+            {
+                return NotFound();
+            }
+            var pieViewModel = mapper.Map<DetailsViewModel>(pie);
+
+            return View(pieViewModel);
+        }
+
     }
 }

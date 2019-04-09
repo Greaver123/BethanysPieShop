@@ -7,6 +7,14 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <nav class="navbar navbar-expnd-sm bg-light">
+        <a asp-controller="Home" asp-action="Index" class="navbar-brand"> Bethany's Pie Shop</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                @*<a asp-controller="Home" asp-action="Index"> Bethany's Pie Shop</a>*@
+            </li>
+        </ul>
+    </nav>
     <div class="container body-content">
         <div class="row">
             @RenderBody()
