@@ -14,11 +14,14 @@
                 <a asp-controller="Feedback" asp-action="Index" class="nav-link">Feedback </a>
             </li>
         </ul>
+        <partial name="_loginPartial" />
     </nav>
+
     <div class="container body-content">
         <div class="row">
             @RenderBody()
         </div>
     </div>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

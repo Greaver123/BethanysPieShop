@@ -7,10 +7,13 @@ using BethanysPieShop.DataSource.Models;
 using BethanysPieShop.DataSource.Repositories;
 using BethanysPieShop.Models.Dtos;
 using BethanysPieShop.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BethanysPieShop.Controllers
 {
+
+    [Authorize]
     public class FeedbackController : Controller
     {
         private readonly IFeedbackRepository feedbackRepository;

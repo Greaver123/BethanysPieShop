@@ -1,4 +1,6 @@
 ﻿using BethanysPieShop.DataSource.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +8,7 @@ using System.Text;
 
 namespace BethanysPieShop.DataSource
 {
-    public class PieShopDbContext : DbContext
+    public class PieShopDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Pie> Pies { get; set; }
 
