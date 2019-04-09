@@ -29,6 +29,7 @@ namespace BethanysPieShop
                     _configuration.GetConnectionString("MSSQLConnection"))
                     );
             services.AddTransient<IPieRepository, SqlPieRepository>(); //every time new instance
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
             services.AddMvc();
         }
 

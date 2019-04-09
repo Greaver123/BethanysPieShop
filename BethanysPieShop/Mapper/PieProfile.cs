@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BethanysPieShop.DataSource.Models;
+using BethanysPieShop.Models.Dtos;
 using BethanysPieShop.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace BethanysPieShop.Mapper
         public PieProfile()
         {
             CreateMap<Pie, DetailsViewModel>();
+            CreateMap<FeedbackAddRequest, Feedback>();
+            CreateMap<FeedbackAddRequest, FeedbackViewModel>();
         }
     }
 }

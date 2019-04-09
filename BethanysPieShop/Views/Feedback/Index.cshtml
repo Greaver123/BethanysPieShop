@@ -1,0 +1,42 @@
+﻿@model FeedbackViewModel
+
+@{
+    ViewData["Title"] = "Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Feedback</h1>
+
+<form asp-action="Index" method="post" class="form-horizontal" role="form">
+
+    @*<div asp-validation-summary="All" class="text-danger"></div>*@
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Message"></label>
+        <textarea asp-for="Message" class="form-control"> </textarea>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ContactMe" class="checkbox-inline">
+        </label>
+        <input type="checkbox" asp-for="ContactMe" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Send feedback" />
+    </div>
+</form>
+
